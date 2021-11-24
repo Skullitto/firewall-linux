@@ -1,19 +1,18 @@
-# Firewall Linux iptable
+#Script firewall Linux iptable basic :smile:
 
-Info: Par défault linux autorise tout ! 
+##Info: Par défault linux autorise tout !
 
-1- donné les droits d'exécution au fichier : **sudo chmod + x firawall.sh**
+### Vous devez avoir les priviléges root
 
-2- testé si tout fonctionne, exécution du script ( il faut se trouver dans le dossier ou est situé votre script) : **./firewall.sh**
+1- Donné les droits d'exécution aux fichiers : **chmod 755 firawall.sh flush.sh firewall.service**
 
-3- copier le fichier dans /etc/init.d/ : **sudo cp firewall.sh /etc/init.d/**
+2- Copier les fichiers dans /etc : **cp firewall.sh flush.sh /etc/ && cp firewall.service /etc/systemd/system**
 
-4- l'activer au démarage : **sudo update-rc.d firewall defaults**
+3- L'activer au démarage : **systemctl enable firewall.service**
 
-Commande pour remétrer à zéro les règles ;
+4- Tester le service **systemctl enable firewall.service**
 
-1- sudo chmod +x flush.sh
+5- Status le service **systemctl status firewall.service**
 
-2- ./flush.sh
-
-Bien penser à désactiver le script au démarrage : **sudo update-rc.d firewall remove**
+###Commande remise à zéro les règles
+**cd /etc/init.d && ./flush.sh**

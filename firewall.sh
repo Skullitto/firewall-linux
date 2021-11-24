@@ -35,15 +35,15 @@ iptables -t filter -A OUTPUT -p icmp -j DROP
 echo "Configuration Ping ok"
 
 # SSH IN/OUT
-iptables -t filter -A INPUT -p tcp --dport 1337 -j DROP
-iptables -t filter -A OUTPUT -p tcp --dport 1337 -j DROP
+iptables -t filter -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -t filter -A OUTPUT -p tcp --dport 22 -j ACCEPT
 echo "Configuration SSH ok"
 
 # DNS In/Out
-iptables -t filter -A OUTPUT -p tcp --dport 53 -j ACCEPT
-iptables -t filter -A OUTPUT -p udp --dport 53 -j ACCEPT
-iptables -t filter -A INPUT -p tcp --dport 53 -j ACCEPT
-iptables -t filter -A INPUT -p udp --dport 53 -j ACCEPT
+iptables -t filter -A OUTPUT -p tcp --dport 53 -j DROP
+iptables -t filter -A OUTPUT -p udp --dport 53 -j DROP
+iptables -t filter -A INPUT -p tcp --dport 53 -j DROP
+iptables -t filter -A INPUT -p udp --dport 53 -j DROP
 echo "Configuration dns ok"
 
 # NTP Out
@@ -86,3 +86,8 @@ iptables -t filter -A OUTPUT -p tcp --dport 143 -j DROP
 iptables -t filter -A INPUT -p tcp --dport 995 -j DROP
 iptables -t filter -A OUTPUT -p tcp --dport 995 -j DROP
 echo "Configuration mail ok"
+
+# OPENVPN:1194
+iptables -t filter -A INPUT -p tcp --dport 1194 -j ACCEPT
+iptables -t filter -A OUTPUT -p tcp --dport 1194 -j ACCEPT
+echo "Configuration openvpn ok"
