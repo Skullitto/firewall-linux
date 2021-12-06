@@ -10,5 +10,5 @@
 - Tester le service **_systemctl enable firewall.service_**
 - Status du service **_systemctl status firewall.service_**
 
-### Commande remise à zéro les règles
+### Commande remise à zéro des règles
 **_cd /etc/init.d && ./flush.sh_**
