@@ -31,14 +31,14 @@ iptables -t filter -A INPUT -p icmp -j ACCEPT
 iptables -t filter -A OUTPUT -p icmp -j ACCEPT
 
 # SSH IN/OUT
-iptables -t filter -A INPUT -p tcp --dport 22 -j DROP
-iptables -t filter -A OUTPUT -p tcp --dport 22 -j DROP
+iptables -t filter -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -t filter -A OUTPUT -p tcp --dport 22 -j ACCEPT
 
 # DNS In/Out
-iptables -t filter -A OUTPUT -p tcp --dport 53 -j DROP
-iptables -t filter -A OUTPUT -p udp --dport 53 -j DROP
-iptables -t filter -A INPUT -p tcp --dport 53 -j DROP
-iptables -t filter -A INPUT -p udp --dport 53 -j DROP
+iptables -t filter -A OUTPUT -p tcp --dport 53 -j ACCEPT
+iptables -t filter -A OUTPUT -p udp --dport 53 -j ACCEPT
+iptables -t filter -A INPUT -p tcp --dport 53 -j ACCEPT
+iptables -t filter -A INPUT -p udp --dport 53 -j ACCEPT
 
 # NTP Out
 iptables -t filter -A OUTPUT -p udp --dport 123 -j DROP
@@ -61,17 +61,17 @@ iptables -t filter -A INPUT -p tcp --dport 21 -j DROP
 iptables -t filter -A INPUT -m state --state ESTABLISHED,RELATED -j DROP
 
 # Mail SMTP:25
-iptables -t filter -A INPUT -p tcp --dport 25 -j DROP
-iptables -t filter -A OUTPUT -p tcp --dport 25 -j DROP
+iptables -t filter -A INPUT -p tcp --dport 25 -j ACCEPT
+iptables -t filter -A OUTPUT -p tcp --dport 25 -j ACCEPT
 
 # Mail POP3:110
-iptables -t filter -A INPUT -p tcp --dport 110 -j DROP
-iptables -t filter -A OUTPUT -p tcp --dport 110 -j DROP
+iptables -t filter -A INPUT -p tcp --dport 110 -j ACCEPT
+iptables -t filter -A OUTPUT -p tcp --dport 110 -j ACCEPT
 
 # Mail IMAP:143
-iptables -t filter -A INPUT -p tcp --dport 143 -j DROP
-iptables -t filter -A OUTPUT -p tcp --dport 143 -j DROP
+iptables -t filter -A INPUT -p tcp --dport 143 -j ACCEPT
+iptables -t filter -A OUTPUT -p tcp --dport 143 -j ACCEPT
 
 # Mail POP3S:995
-iptables -t filter -A INPUT -p tcp --dport 995 -j DROP
-iptables -t filter -A OUTPUT -p tcp --dport 995 -j DROP
+iptables -t filter -A INPUT -p tcp --dport 995 -j ACCEPT
+iptables -t filter -A OUTPUT -p tcp --dport 995 -j ACCEPT
