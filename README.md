@@ -6,7 +6,7 @@
 
 1- Donné les droits d'exécution aux fichiers : **chmod +x firawall flush firewall.service**
 
-2- Copier les fichiers dans /etc : **cp firewall flush /etc/ && cp firewall.service /etc/systemd/system**
+2- Copier les fichiers dans /etc/init.d : **cp firewall flush /etc//init.d && cp firewall.service /etc/systemd/system**
 
 3- L'activer au démarage : **systemctl enable firewall.service**
 
