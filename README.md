@@ -12,5 +12,5 @@
 
 4- Status le service **systemctl status firewall.service**
 
-###Commande pour remétrer à zéro les règles
+### Commande pour remétrer à zéro les règles
 **cd /etc/init.d/ && ./flush.sh**
