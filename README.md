@@ -1,6 +1,6 @@
-#Script firewall Linux iptable basic :smile:
+# Script firewall Linux iptable basic :smile:
 
-##Info: Par défault linux autorise tout !
+## Info: Par défault linux autorise tout !
 
 ### Vous devez avoir les priviléges root
 
