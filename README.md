@@ -1,14 +1,16 @@
-# Script firewall Linux iptable basic :smile:
+#Script firewall Linux iptable basic :smile:
 
-## Info: Par défault linux autorise tout !
+##Info: Par défault linux autorise tout !
 
 ### Vous devez avoir les priviléges root
 
-- Donné les droits d'exécution aux fichiers : **_chmod 755 firawall.sh flush.sh firewall.service_**
-- Copier les fichiers dans /etc/init.d : **_cp firewall.sh flush.sh /etc/init.d/ && cp firewall.service /etc/systemd/system_**
-- L'activer au démarage : **_systemctl enable firewall.service_**
-- Tester le service **_systemctl enable firewall.service_**
-- Status du service **_systemctl status firewall.service_**
+1- Donné les droits d'exécution aux fichiers : **chmod +x firawall flush firewall.service**
 
-### Commande remise à zéro des règles
-**_cd /etc/init.d && ./flush.sh_**
+2- Copier les fichiers dans /etc : **cp firewall flush /etc/ && cp firewall.service /etc/systemd/system**
+
+3- L'activer au démarage : **systemctl enable firewall.service**
+
+4- Status le service **systemctl status firewall.service**
+
+###Commande pour remétrer à zéro les règles
+**cd /etc/init.d && ./flush.sh**

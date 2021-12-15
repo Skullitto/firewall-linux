@@ -1,12 +1,13 @@
 [Unit]
-Description=Firewall iptables
-ConditionFileIsExecutable=/etc/init.d/firewall.sh
+Description=Application du firewall
 After=network.target
-
+ConditionPathExists=/etc/init.d/ >> ./firewall
+ 
 [Service]
-Type=oneshot
-ExecStart=/etc/init.d/firewall.sh
+Type= oneshot
+ExecStart=/etc/init.d/ >> ./firewall
+ExecStop=/etc/init.d/ >> ./flush
 RemainAfterExit=yes
-
+ 
 [Install]
 WantedBy=multi-user.target
