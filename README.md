@@ -42,7 +42,7 @@ _stable :_ **Dernière version stable :** 1.0
 
 ## Auteurs
 
-* **Skulls-sky** _alias_ [@outout14](https://github.com/skulls-sky)
+* **Skulls-sky** _alias_ [@skulls-sky](https://github.com/skulls-sky)
 
 
 
