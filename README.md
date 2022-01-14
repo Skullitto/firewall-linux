@@ -24,7 +24,7 @@ dépendances, de contrôle de services.
 
 ### Installation
 
-_Donné les droits d'exécution aux fichiers :_ Executez la commande ``chmod +x firawall flush firewall.service`` pour commencer ensuite [...]
+_Donné les droits d'exécution aux fichiers :_ Executez la commande ``chmod +x firewall flush firewall.service`` pour commencer ensuite [...]
 _Copier les fichiers dans /etc :_ Executez la commande ``cp firewall flush /etc/ && cp firewall.service /etc/systemd/system`` [...]
 
 ## Démarrage
