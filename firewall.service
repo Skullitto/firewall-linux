@@ -1,12 +1,12 @@
 [Unit]
 Description=Application du firewall
 After=network.target
-ConditionPathExists=/etc >> ./firewall
+ConditionPathExists=/etc/firewall
  
 [Service]
 Type= oneshot
-ExecStart=/etc >> ./firewall
-ExecStop=/etc >> ./flush
+ExecStart=/etc/firewall
+ExecStop=/etc/flush
 RemainAfterExit=yes
  
 [Install]
