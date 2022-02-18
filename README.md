@@ -24,17 +24,17 @@ dépendances, de contrôle de services.
 
 ### Installation
 
-_Donné les droits d'exécution aux fichiers :_ Executez la commande ``chmod +x firewall flush firewall.service`` pour commencer ensuite [...]
-_Copier les fichiers dans /etc :_ Executez la commande ``cp firewall flush /etc/ && cp firewall.service /etc/systemd/system`` [...]
+_Donné les droits d'exécution aux fichiers :``chmod +x firewall flush firewall.service``
+_Copier les fichiers dans /etc :``cp firewall flush /etc/ && cp firewall.service /etc/systemd/system``
 
 ## Démarrage
 
-_L'activer au démarage :_ Executez la commande ``systemctl enable firewall.service`` [...]
-_Status le service :_ Executez la commande ``systemctl status firewall.service`` [...]
+_L'activer au démarage :``systemctl enable firewall.service``
+_Status le service :``systemctl status firewall.service``
 
 ## Par default
 
-_Commande pour remétrer à zéro les règles :_ Executez la commande ``cd /etc/ && ./flush.sh`` [...]
+_Commande pour remétrer à zéro les règles :``cd /etc/ && ./flush.sh``
 
 ## Versions
 
